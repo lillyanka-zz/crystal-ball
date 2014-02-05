@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class CrystalBall;
 
+@interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *prediction_lbl;
+- (IBAction)submitBtn:(UIButton *)sender;
+@property (strong, nonatomic) CrystalBall *crystalBall;
 @end

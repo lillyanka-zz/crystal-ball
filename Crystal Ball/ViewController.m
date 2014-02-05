@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CrystalBall.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	self.crystalBall = [[CrystalBall alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)submitBtn:(UIButton *)sender {
+    self.prediction_lbl.text = [self.crystalBall randomPrediction];
+}
 @end
